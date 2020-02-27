@@ -1,0 +1,7 @@
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style='height:{{heig}}'>
+  <swiper-item wx:for="{{imgUrls}}">
+    <image class="img" src='{{item}}' mode="aspectFit" bindload="imageLoad" />
+  </swiper-item>
+</swiper>
+
+<button bindtap="changeAutoplay">自动播放开关</button>
