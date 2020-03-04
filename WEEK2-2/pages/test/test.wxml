@@ -1,0 +1,14 @@
+
+<button bindtap="checkScholarship" class="btn"> 查看奖学金 </button>
+<view wx:if= "{{checked1}}">
+  <view wx:for="{{array1}}" wx:for-index="idx" wx:for-item="itemName" class="text">
+  {{idx+1}}: {{itemName.message}}
+  </view>
+</view>
+
+<button bindtap="checkGrades" class="btn"> 查看成绩 </button>
+<view wx:if= "{{checked2}}">
+  <view wx:for="{{array2}}" wx:for-index="idx" wx:for-item="itemName" class="text">
+  {{idx+1}}: {{itemName.message}}
+  </view>
+</view>
