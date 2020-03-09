@@ -1,0 +1,32 @@
+<view class="section">
+  <view>横向滑动</view>
+  <scroll-view scroll-x="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll">
+    <view class="scroll-x">
+      <view wx:for-items="{{scrolls}}" wx:key="name">
+        <view id="{{item.tag}}" class="{{item.tag}}">{{item.name}}</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+<!--<view class="section">
+  <view>可移动区域</view>
+  <movable-area class="area">
+    <movable-view direction="vertical">
+      <view wx:for-items="{{moves}}" wx:key="name">
+        <view class="{{item.tag}}">{{item.name}}</view>
+      </view>
+    </movable-view>
+  </movable-area>
+</view>-->
+
+<view class="section">
+  <view>可移动区域</view>
+  <movable-area class="area" wx:for-items="{{moves}}" wx:key="name">
+    <movable-view direction="{{item.direction}}">
+      
+        <view class="{{item.tag}}">{{item.name}}</view>
+     
+    </movable-view>
+  </movable-area>
+</view>
