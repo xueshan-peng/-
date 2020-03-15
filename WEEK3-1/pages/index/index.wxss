@@ -1,0 +1,46 @@
+.section{
+  margin: 20px;
+}
+.scroll-x {
+  display: flex;
+  flex-direction: row; 
+}
+.green
+{
+  display: flex;
+  align-items: center;
+  width: 400rpx;
+  height: 200rpx;
+  background: green;
+}
+.blue
+{
+  display: flex;
+  align-items: center;
+  width: 400rpx;
+  height: 200rpx;
+  background: blue;
+}
+.yellow
+{
+  display: flex;
+  align-items: center;
+  width: 400rpx;
+  height: 200rpx;
+  background: yellow;
+}
+.area
+{
+  margin: 10px;
+  height: 200px;
+  width: 200px;
+  background:green;
+}
+.white
+{
+  height: 20px;
+  width:50px;
+  background: white;
+  text-align: center;
+  font-size: 10px;
+}
