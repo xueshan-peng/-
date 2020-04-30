@@ -1,0 +1,60 @@
+<!--index.wxml-->
+    <view class="index_tab_box">
+        <view class="tab_items {{tabIndex==0? 'on':''}}" bindtap="tabHandle" data-idx="0">
+            <text>首页</text>
+        </view>
+        <view class="tab_items {{tabIndex==1? 'on':''}}" bindtap="tabHandle" data-idx="1">
+            <text>我的</text>
+        </view>
+    </view>
+    <block wx:if="{{tabIndex==0}}">
+        <view class="container">
+          <view class="userinfo">
+            <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+            <block wx:else>
+              <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+              <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+            </block>
+          </view>
+          <view class="usermotto">
+            <text class="user-motto">{{motto}}</text>
+          </view>
+        </view>
+    </block>
+    <block wx:else>
+      <block wx:if="{{ indexPhotoList.length>0 }}">
+        <view class="photolist">
+          <block wx:for="{{indexPhotoList}}" wx:key="item">
+            <view class="edit_list_container">
+              <view class="edit_list">
+                <image src="/images/icon_del.png" mode="aspectFit" class="del_btn" bindtap="bindDelete" data-index="{{index}}"></image>
+                <view class="edit_list_cont">
+                  <image src="{{item.imageUrl}}"></image>
+                  <view class="edit_list_txt">
+                    <text>{{item.time}}\t{{item.album}}</text>
+                    <view class="line"></view>
+                    <text>{{item.content}}</text>
+                  </view>
+                  <view class="move_box">
+    					      <view class="moveable move_up">
+    						      <image src="/images/icon_m_thumb.png"></image>
+    						      <text>1.1w</text>
+    					      </view>
+    					      <view class="moveable move_down">
+    						      <image src="/images/icon_m_msg.png"></image>
+    						      <text>100</text>
+    					      </view>
+    				      </view>
+                </view> 
+              </view>
+            </view>	
+          </block>
+        </view>
+      </block>
+      <block wx:else>
+          <view class="no-data">
+                <text>还没有上传照片哦\n(如果没有登录请点击左侧tab进行授权)</text>
+          </view>
+      </block>
+    </block>
+

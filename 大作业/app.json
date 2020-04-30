@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/album/album",
+    "pages/upload/upload",
+    "pages/photo/photo",
+    "pages/map/map"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "花期图片分享",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#FF5167",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "个人页面",
+        "iconPath": "/images/tabIcon3.png",
+        "selectedIconPath": "/images/tabIcon3_on.png"
+      },
+      {
+        "pagePath": "pages/album/album",
+        "text": "公园相册",
+        "iconPath": "/images/tabIcon2.png",
+        "selectedIconPath": "/images/tabIcon2_on.png"
+      },
+      {
+        "pagePath": "pages/map/map",
+        "text": "探索周边",
+        "iconPath": "/images/tabIcon1.png",
+        "selectedIconPath": "/images/tabIcon1_on.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,42 @@
+    	<view class="tags_banner_box">
+    		<image src="/images/banner.png" mode="aspectFit"></image>
+        <view class="tags_box">
+    			<view class="tags">
+            <image src='/images/marker.png'></image>
+          {{albumName}}</view>
+    		</view>
+      </view>
+<view class="{{showView?'header_view_show':'header_view_hide'}}">
+尚无照片资源
+</view>
+<view class="photolist">
+  <block wx:for="{{items}}" wx:key="item">
+        <view class="info_main_box" index="{{index}}">
+		        <image src="{{item.imageUrl}}" mode="aspectFit"></image>
+		        <view class="info_desc_box">
+		            <text class="info_txt">{{item.content}}</text>
+		            <view class="info_footer_box">
+                    <image src="{{item.useravatar}}" mode="aspectFit"></image>
+		                <view class="user_info_box">
+		                    <text class="name_txt">{{item.username}}</text>
+		                    <text class="date_txt">{{item.time}}</text>
+		                </view>
+		                <view class="count_box">
+		                    <view class="count_info_content">
+		                        <image src="/images/icon_s_thumb.png"></image>
+		                        <text>1.1W</text>
+		                    </view>
+		                    <view class="count_info_content">
+		                        <image src="/images/icon_comment2.png"></image>
+		                        <text>100</text>
+		                    </view>
+		                </view>
+		            </view>
+		        </view>
+		    </view>
+  </block>
+</view>
+<button class="add" bindtap="toUpload">
+  <image src="/images/icon_add.png"></image>
+  上传照片
+</button>

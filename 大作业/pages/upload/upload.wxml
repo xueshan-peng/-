@@ -1,0 +1,52 @@
+<!--
+<form bindsubmit="formSubmit">
+  <view class="photoIntro">
+    <input name="photoIntro" placeholder="介绍一下你拍的花吧"></input>
+  </view>
+</form>
+-->
+
+<!--
+<button bindtap='chooseImg'>选择图片</button>
+<view><image src='{{img_l}}' bindtap='preview_img'></image></view>
+ 
+<button type="primary" size="default" bindtap='up_img'>上传</button>
+
+  <view>
+    <button bindtap='chooseImg'>选取照片</button>
+  </view>
+
+   formType="submit" 
+  -->
+<view class="form">
+<view class="input-area">
+    <textarea bindinput="bindinput" class="textarea" placeholder="此刻的感受是..." maxlength="500"/>
+</view>
+
+<view class="images-area">
+
+  <!-- 添加图片按钮  -->
+  <view class="images-tool">
+    <button type="default" size="mini" bindtap="addImg" wx:if="{{images.length < 3}}">
+      请选择照片<view style="color:#b3b3b3;font-size:10px; margin-top:0rpx">最多3张</view>
+    </button>
+  </view>
+
+  <!-- 图片缩略图  -->
+  <view class="images">
+    <block wx:for="{{images}}" wx:key="*this" wx:for-item="source" wx:for-index="index">
+      <view class="image-wrap"> 
+        <image class="image" src="{{source}}" mode="aspectFill" data-index="{{index}}"></image>
+        <view class="image-remover" data-index="{{index}}" bindtap="removeImg">
+        删除<image src="/images/icon_del.png" mode="aspectFit" class="del_btn"></image></view>
+      </view>
+    </block>
+  </view>
+
+</view>
+  
+  <view>
+    <button bindtap='uploadImg' type="primary" size="default">上传</button>
+  </view>
+</view>
+

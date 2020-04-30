@@ -1,0 +1,50 @@
+
+.form {
+  margin: 25rpx;
+}
+
+.input-area {
+  background-color: #fff;
+  border: 1rpx solid #ccc;
+  border-radius: 16rpx;
+  display: flex;
+  margin: 10rpx 30rpx;
+}
+
+.textarea {
+  margin:20rpx 20rpx;
+  font-size: 15px;
+}
+
+.images-area {
+  padding: 40rpx 0;
+}
+
+.images-tool {
+  display: flex;
+  align-items: center;
+}
+
+.images {
+  display: flex;
+  align-items: center;
+  margin-top: 40rpx;
+}
+
+.image-wrap {
+  width: 31%;
+  margin-right: 10rpx;
+}
+
+.image {
+  flex: 1;
+  height: 200rpx;
+  width: 100%;
+}
+.image-remover {
+  text-align: center;
+}
+.del_btn{
+	width: 32rpx;
+	height: 32rpx;
+}
